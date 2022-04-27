@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Props</title>
+</head>
+<body>
+<div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+  function Btn({ text , onClick , fontSize = 12 }){
+    // fontSize=12 는 입력값이 들어오지 않으면 default로 12란 값을 가지게 하고,
+    // 입력값이 들어온다면 얻은 얻은 값으로 동작을 하게 해준다.
+    return (
+            <button
+                    style={{
+                      backgroundColor:"tomato",
+                      color:"white",
+                      padding:"10px 20px",
+                      border: 0,
+                      borderRadius: 10,
+                      fontSize,
+                      cursor: "pointer",}}
+                    onClick={onClick}>
+              {text}
+            </button>
+    );
+  }
+
+  // Properties의 타입을 정해줘서 잘못된 값을 보낼 때 경고문을 볼 수 있다.
+  Btn.propTypes = {
+    text : PropTypes.string.isRequired, //isRequired는 반드시 들어가야 하는 속성이다.
+    fontSize : PropTypes.number,
+
+  }
+
+  // 필요없는 re-render을 막아줄 수 있다. (이것을 사용하지 않을경우 하나의 Btn이 re-render되면 모든 Btn이 re-render 된다.)
+  const MemorizedBtn = React.memo(Btn);
+
+  function App() {
+    const [value, setValue] = React.useState("Save Changes");
+    const changeValue = () => setValue("Revert Changes");
+    return (
+            <div>
+              <MemorizedBtn text={value} onClick={changeValue} fontSize={16} />
+              <MemorizedBtn text="Continue" />
+            </div>
+    );
+  }
+
+  const root = document.getElementById("root");
+  ReactDOM.render(<App />,root);
+</script>
+</html>
