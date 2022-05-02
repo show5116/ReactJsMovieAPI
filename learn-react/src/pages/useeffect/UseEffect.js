@@ -1,8 +1,9 @@
-import Button from "./Button";
+import Button from "../../components/button/Button";
 import styles from "./UseEffect.module.css";
 import {useEffect, useState} from "react";
+import Return from "../../components/return/Return";
 
-function App() {
+function UseEffect() {
     const [counter, setCounter] = useState(0);
     const [keyword, setKeyword] = useState("");
     const onClick = () => setCounter((prev) => prev + 1);
@@ -26,7 +27,7 @@ function App() {
 
     return (
         <div>
-            <h1 className={styles.title}>Welcome back!</h1>
+            <Return className={styles.title} title="Welcome back!" />
             <label htmlFor=""></label>
             <input type="text" placeholder="Search.." onChange={onChange}/>
             <div>
@@ -37,4 +38,4 @@ function App() {
     );
 }
 
-export default App;
+export default UseEffect;

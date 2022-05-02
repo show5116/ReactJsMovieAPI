@@ -10,5 +10,16 @@ $ npx create-react-app learn-react
 $ cd /learn-react
 $ npm i prop-types
 $ npm i react-router-dom
+$ npm i classnames
 $ npm start
+```
+
+
+used react-router-dom v6
+
+
+use git-hub pages
+```
+$ npm i gh-pages
+
 ```

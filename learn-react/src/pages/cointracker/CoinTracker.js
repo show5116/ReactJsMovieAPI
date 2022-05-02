@@ -1,10 +1,10 @@
-import ToDo from "./ToDo";
 import {useEffect, useState} from "react";
+import Return from "../../components/return/Return";
 
 function CoinTracker() {
     const [loading, setLoading] = useState(true);
     const [coins, setCoins] = useState([]);
-
+    const [title, setTitle] = useState("The Coins");
     useEffect(() => {
         fetch("https://api.coinpaprika.com/v1/tickers")
             .then((response) => response.json())
@@ -14,9 +14,13 @@ function CoinTracker() {
             });
     }, []);
 
+    useEffect(() => {
+        setTitle(`The Coins (${coins.length})`);
+    },[coins]);
+
     return (
         <div>
-            <h1>The Coins ({coins.length})</h1>
+            <Return title={title} />
             {loading ? <strong>Loading...</strong> : null}
             <select>
                 {coins.map((coin) =>

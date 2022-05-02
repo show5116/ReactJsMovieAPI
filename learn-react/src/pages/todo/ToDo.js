@@ -1,8 +1,10 @@
-import {useEffect, useState} from "react";
+import {useState} from "react";
+import Return from "../../components/return/Return";
 
 function ToDo() {
     const [toDo, setToDo] = useState("");
     const [toDoList, setToDoList] = useState([]);
+    const [title, setTitle] = useState("My To Dos");
     const onChange = (event) => setToDo(event.target.value);
     const onSubmit = (event) => {
         event.preventDefault();
@@ -11,10 +13,11 @@ function ToDo() {
         }
         setToDoList((prev) => [toDo,...prev]);
         setToDo("");
+        setTitle(`My To Dos ${toDoList.length+1}`);
     }
     return (
         <div>
-            <h1>My To Dos {toDoList.length}</h1>
+            <Return title={title} />
             <form onSubmit={onSubmit}>
                 <input onChange={onChange} value={toDo} type="text" placeholder="Write your to do..."/>
                 <button>Add To Do</button>

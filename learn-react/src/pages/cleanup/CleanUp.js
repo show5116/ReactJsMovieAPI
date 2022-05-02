@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import Return from "../../components/return/Return";
 
 function Hello(){
     // showing 할 떄 마다 useEffect 내부 함수가 실행되고,
@@ -12,15 +13,16 @@ function Hello(){
     return <h1>Hello</h1>;
 }
 
-function App() {
+function CleanUp() {
     const [showing, setShowing] = useState(false);
     const onClick = () => setShowing((prev) => !prev);
     return (
         <div>
+            <Return title="Clean Up" />
             {showing ? <Hello /> : null}
             <button onClick={onClick}>{showing ? "Hide" : "Show"}</button>
         </div>
     );
 }
 
-export default App;
+export default CleanUp;
