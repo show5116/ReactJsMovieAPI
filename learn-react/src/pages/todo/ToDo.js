@@ -1,5 +1,4 @@
 import {useState} from "react";
-import Return from "../../components/return/Return";
 
 function ToDo() {
     const [toDo, setToDo] = useState("");
@@ -17,7 +16,7 @@ function ToDo() {
     }
     return (
         <div>
-            <Return title={title} />
+            <h1>{title}</h1>
             <form onSubmit={onSubmit}>
                 <input onChange={onChange} value={toDo} type="text" placeholder="Write your to do..."/>
                 <button>Add To Do</button>

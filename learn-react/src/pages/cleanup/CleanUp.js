@@ -1,5 +1,4 @@
 import {useEffect, useState} from "react";
-import Return from "../../components/return/Return";
 
 function Hello(){
     // showing 할 떄 마다 useEffect 내부 함수가 실행되고,
@@ -18,7 +17,7 @@ function CleanUp() {
     const onClick = () => setShowing((prev) => !prev);
     return (
         <div>
-            <Return title="Clean Up" />
+            <h1>Clean Up</h1>
             {showing ? <Hello /> : null}
             <button onClick={onClick}>{showing ? "Hide" : "Show"}</button>
         </div>

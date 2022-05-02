@@ -1,7 +1,6 @@
 import Button from "../../components/button/Button";
 import styles from "./UseEffect.module.css";
 import {useEffect, useState} from "react";
-import Return from "../../components/return/Return";
 
 function UseEffect() {
     const [counter, setCounter] = useState(0);
@@ -27,7 +26,7 @@ function UseEffect() {
 
     return (
         <div>
-            <Return className={styles.title} title="Welcome back!" />
+            <h1 className={styles.title}>Welcome back!</h1>
             <label htmlFor=""></label>
             <input type="text" placeholder="Search.." onChange={onChange}/>
             <div>

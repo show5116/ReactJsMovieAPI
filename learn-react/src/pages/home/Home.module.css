@@ -1,25 +1,15 @@
-.link_container{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 200px;
+.title{
+    font-size: 3rem;
+    text-align: center;
 }
 
-a {
-    text-decoration: none;
-}
+.content{
 
-a:link,a:visited,a:hover,a:active{
-    color: black;
 }
-
 
 .btn{
-    background-color: aquamarine;
-    border-radius: 15px;
-    color: black;
-    padding: 15px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    padding: .75rem 1.5rem;
+    font-size: 1.5rem;
+    border : 1.5px black solid;
+    border-radius: 5px;
 }

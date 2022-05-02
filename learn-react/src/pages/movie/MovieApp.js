@@ -1,6 +1,5 @@
 import {useEffect, useState} from "react";
 import Movie from "./Movie";
-import Return from "../../components/return/Return";
 
 function MovieApp() {
     const [loading,setLoading] = useState(true);
@@ -19,7 +18,7 @@ function MovieApp() {
 
     return (
         <div>
-            <Return title="The Movie App!"/>
+            <h1>The Movie App</h1>
             <div>
                 {loading ?
                     (<strong>Loading...</strong>) :

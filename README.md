@@ -15,6 +15,8 @@ $ cd /learn-react
 $ npm i prop-types
 $ npm i react-router-dom
 $ npm i classnames
+$ npm i styled-reset
+$ npm i @types/react-responsive
 $ npm start
 ```
 

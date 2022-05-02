@@ -1,5 +1,4 @@
 import {useEffect, useState} from "react";
-import Return from "../../components/return/Return";
 
 function CoinTracker() {
     const [loading, setLoading] = useState(true);
@@ -20,7 +19,7 @@ function CoinTracker() {
 
     return (
         <div>
-            <Return title={title} />
+            <h1>{title}</h1>
             {loading ? <strong>Loading...</strong> : null}
             <select>
                 {coins.map((coin) =>
