@@ -1,0 +1,19 @@
+.footer__container{
+    padding-top: 3rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.footer__container,
+.footer__container .footer__link,
+.footer__container .footer__link:link,
+.footer__container .footer__link:visited,
+.footer__container .footer__link:active
+{
+    color:  gray;
+}
+
+.footer__container .footer__link:hover{
+    color:  black;
+}
+

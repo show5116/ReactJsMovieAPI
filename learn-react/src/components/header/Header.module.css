@@ -1,0 +1,22 @@
+.header__container{
+    border-bottom: 2px #e5e7eb solid;
+}
+
+.header__menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 0px 15px 50px;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.home__btn{
+    cursor: pointer;
+    width: 50px;
+    opacity: .7;
+}
+
+.home__btn:hover{
+    opacity: 1;
+}
