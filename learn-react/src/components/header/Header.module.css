@@ -20,3 +20,47 @@
 .home__btn:hover{
     opacity: 1;
 }
+
+.header__mobile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px 15px 50px;
+    font-size: 20px;
+}
+
+.hamburger{
+    right: 20px;
+    opacity: .8;
+    cursor: pointer;
+    width: 20px;
+}
+
+.hamburger:hover{
+    opacity: 1;
+}
+
+.hamburger__menu{
+    display: flex;
+    position: absolute;
+    height: 0;
+    width: 100%;
+    left: 0;
+    top: 88px;
+    gap: 20px;
+    font-size: 1.2rem;
+    flex-direction: column;
+    padding: 30px 0px 0px 30px;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+
+.hamburger__menu.active{
+    top: 88px;
+    height: 250px;
+    z-index: 1;
+    background-color: white;
+    border-bottom: 2px #e5e7eb solid;
+}
+

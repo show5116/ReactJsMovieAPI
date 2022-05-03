@@ -7,20 +7,21 @@ import CleanUp from "./pages/cleanup/CleanUp";
 import UseEffect from "./pages/useeffect/UseEffect";
 import CoinTracker from "./pages/cointracker/CoinTracker";
 import {Reset} from "styled-reset";
-import {useMediaQuery} from "react-responsive";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import styles from "./App.module.css";
+import {useEffect} from "react";
 
 function App() {
 
-    const isPc = useMediaQuery({
-        query : "(min-width:767px)"
-    });
+    function setScreenSize(){
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh",`${vh}px`)
+    }
 
-    const isMobile = useMediaQuery({
-        query : "(max-width:767px)"
-    });
+    useEffect(()=>{
+        setScreenSize();
+    })
 
     return (
         <BrowserRouter

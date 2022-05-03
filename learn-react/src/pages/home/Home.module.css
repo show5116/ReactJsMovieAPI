@@ -1,15 +1,31 @@
-.title{
+.home__container{
+
+}
+
+
+.home__container .title{
     font-size: 3rem;
     text-align: center;
 }
 
-.content{
-
+.home__container .content{
+    height: 100px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
 }
 
-.btn{
+.home__container .btn{
+    display: inline-block;
     padding: .75rem 1.5rem;
     font-size: 1.5rem;
     border : 1.5px black solid;
-    border-radius: 5px;
+    border-radius: 10px;
+    transition: .2s ease-in-out;
+    margin-bottom: 1.5rem;
+}
+
+.home__container .btn:hover{
+    background-color: #333333;
+    color: white;
 }

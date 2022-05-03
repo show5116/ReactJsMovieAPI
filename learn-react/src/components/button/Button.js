@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
 import styles from "./Button.module.css";
 
-function Button({text}){
+function Button({text , func}){
     return (
       <button
-        className={styles.btn}>
+        className={styles.btn}
+        onClick={func}>
           {text}
       </button>
     );
@@ -12,6 +13,7 @@ function Button({text}){
 
 Button.propTypes = {
     text : PropTypes.string.isRequired,
+    func : PropTypes.func
 };
 
 export default Button;

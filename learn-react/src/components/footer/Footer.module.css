@@ -1,7 +1,8 @@
 .footer__container{
-    padding-top: 3rem;
+    padding-top: 1.5rem;
     line-height: 1.2;
     text-align: center;
+    border-top: 2px #e5e7eb solid;
 }
 
 .footer__container,

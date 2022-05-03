@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import Loading from "../../components/loading/Loading";
 
 function CoinTracker() {
     const [loading, setLoading] = useState(true);
@@ -20,7 +21,7 @@ function CoinTracker() {
     return (
         <div>
             <h1>{title}</h1>
-            {loading ? <strong>Loading...</strong> : null}
+            {loading ? <Loading /> : null}
             <select>
                 {coins.map((coin) =>
                     <option>

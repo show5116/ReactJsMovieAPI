@@ -27,10 +27,15 @@ function UseEffect() {
     return (
         <div>
             <h1 className={styles.title}>Welcome back!</h1>
+            <div>
+                f12 누르고 콘솔을 봐주세요. <br/>
+                Please press f12 & look at console.
+            </div>
             <label htmlFor=""></label>
             <input type="text" placeholder="Search.." onChange={onChange}/>
+
             <div>
-                <button onClick={onClick}>click me</button>
+                <Button func={onClick} text={"click me"} />
                 <Button text={"Continue"} />
             </div>
         </div>

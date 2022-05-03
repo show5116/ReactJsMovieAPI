@@ -1,0 +1,40 @@
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    .app__container .title{
+        font-size: 2rem;
+        position: fixed;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }
+
+    .app__container{
+        height: 100%;
+        overflow: auto;
+        scroll-snap-type: y mandatory;
+    }
+
+    .movie__container{
+        display: flex;
+        flex-direction: column;
+        gap: 200px;
+        padding-top: 100px;
+    }
+
+}
+
+/* PC */
+@media screen and (min-width: 768px) {
+    .title{
+        margin-bottom: 1.5rem;
+    }
+
+    .movie__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 100px;
+        border-radius: 10px;
+        padding: 30px;
+    }
+}
