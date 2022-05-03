@@ -25,7 +25,7 @@
 
     .movie__detail,
     .movie__genres,
-    .movie__genres li{
+    .movie__summary{
         display: none;
     }
 }

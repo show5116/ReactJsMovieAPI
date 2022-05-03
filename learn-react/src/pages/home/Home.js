@@ -5,8 +5,9 @@ function Home() {
         <div className={styles.home__container}>
             <h1 className={styles.title}>Clone And Apply!</h1>
             <div className={styles.content}>
-                노마드 코더 ReactJS로 영화 웹 만들기 강의를 듣고,<br/>
-                state, props, useState, useEffect 등의 리엑트 기능 학습<br/>
+                ReactJS로 영화 웹 만들기<br/>
+                state, props, useState, useEffect<br/>
+                등의 리엑트 기능 학습<br/>
                 기능 추가와 디자인 적용.
             </div>
             <a className={styles.btn} href="https://nomadcoders.co/react-for-beginners/lobby">강의로 가기 →</a> <br/>

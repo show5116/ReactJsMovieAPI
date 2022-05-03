@@ -1,4 +1,19 @@
+/* Mobile */
+@media screen and (max-width: 767px) {
+    .home__btn{
+        width: 40px;
+    }
+}
+
+/* PC */
+@media screen and (min-width: 768px) {
+    .home__btn{
+        width: 50px;
+    }
+}
+
 .header__container{
+    height: 10vh;
     border-bottom: 2px #e5e7eb solid;
 }
 
@@ -13,7 +28,6 @@
 
 .home__btn{
     cursor: pointer;
-    width: 50px;
     opacity: .7;
 }
 
@@ -26,7 +40,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px 15px 50px;
+    padding: 5px 30px 5px 50px;
     font-size: 20px;
 }
 

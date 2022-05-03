@@ -1,3 +1,7 @@
+:root{
+    --vh: 100%;
+}
+
 html{
     display: block;
     width: 100%;
@@ -5,12 +9,9 @@ html{
     margin: 0;
 }
 
-:root{
-    --vh: 100%;
-}
-
 .main__container{
     width: 100%;
+    height: calc(var(--vh,1vh) * 100);
     margin: 0;
     font-size: 15px;
     color: #333333;
