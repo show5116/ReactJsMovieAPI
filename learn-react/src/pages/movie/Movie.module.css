@@ -34,11 +34,12 @@
 @media screen and (min-width: 768px) {
     .movie{
         display: grid;
-        grid-template-columns: minmax(150px, 1fr) 2fr;
+        grid-template-columns: 1fr 2fr;
         grid-gap: 20px;
     }
 
     .img__container{
+        width: 180px;
         position: relative;
     }
 
@@ -110,7 +111,7 @@
     background-color: white;
     opacity: 1;
     top: 35px;
-    left: 18px;
+    left:10%;
 }
 
 
